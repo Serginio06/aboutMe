@@ -1,0 +1,147 @@
+
+.NavBar {
+  background: #ffffff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: $fontColorGreen;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dimmer {
+  display: flex;
+  background: #000;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  @include transitionAll(0.6s);
+}
+
+.dimmer.active {
+  opacity: 0.3;
+}
+
+
+.NavBar__name {
+  position: relative;
+  padding-left: 5%;
+  letter-spacing: 4.45px;
+  font-size: 22px;
+  font-weight: 500;
+  opacity: 1;
+  display: flex;
+  justify-content: flex-start;
+  @include transitionAll(0.2s);
+
+  a:visited {
+    color: $fontColorGreen;
+  }
+}
+
+.NavBar__name.deActive {
+  opacity: 0;
+}
+
+.NavBar__items-wrapper {
+  position: absolute;
+  right: -209px;
+  color: $fontColorGrey;
+  min-width: 240px;
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+
+  @include transitionAll(0.5s);
+}
+
+.NavBar__items-wrapper.openUp {
+  right: -5px;
+}
+
+.NavBar__barsIcon {
+  position: relative;
+  top: 20px;
+  padding-right: 14px;
+  max-height: 32px;
+  z-index: 11000;
+}
+
+.NavBar__itemsList {
+  width: 30vw;
+  min-width: 200px;
+  max-width: 200px;
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0;
+  font-family: FuturaPTLight;
+  font-size: 14px;
+  justify-content: space-between;
+  list-style: none;
+  letter-spacing: 1.61px;
+  border: none;
+  -webkit-box-shadow: -4px 3px 5px 0px rgba(219, 219, 219, 1);
+  -moz-box-shadow: -4px 3px 5px 0px rgba(219, 219, 219, 1);
+  box-shadow: -4px 3px 5px 0px rgba(219, 219, 219, 1);
+  z-index: 11000;
+  background-color: #ffffff;
+
+  li {
+    display: block;
+    padding-left: 30%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  .NavBar {
+    flex-wrap: nowrap;
+  }
+
+  .NavBar__barsIcon {
+    display: none;
+  }
+
+  .NavBar__items-wrapper {
+    width: 50%;
+    right: 5%;
+    top: 0;
+    justify-content: flex-end;
+  }
+
+  .NavBar__itemsList {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    min-height: 0;
+    min-width: 0;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    border: none;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(219, 219, 219, 1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(219, 219, 219, 1);
+    box-shadow: 0px 0px 0px 0px rgba(219, 219, 219, 1);
+    justify-content: flex-end;
+
+    li {
+      padding-bottom: 0;
+      padding-left: 20px;
+    }
+  }
+
+}

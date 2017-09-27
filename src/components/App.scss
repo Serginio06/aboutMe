@@ -1,0 +1,61 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  object-position: 0 -10px;
+  transform: scale(1.9);
+  width: 120vw;
+}
+
+.App__background-wrapper {
+  min-width: 320px;
+  height: 66.67vh;
+  max-height: 66.67vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+}
+
+.App-header {
+  min-height: 66.67vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+  background-repeat: no-repeat;
+  background-position: calc(30% - 50px) 100px;
+  min-width: 320px;
+  transform: scale(1.6);
+
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .App-header {
+    background-position-y: 0;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .App-header {
+    transform: scale(1.0);
+    background-position: calc(50%) -15vw;
+  }
+}

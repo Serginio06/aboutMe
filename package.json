@@ -2,8 +2,13 @@
   "name": "mysite",
   "version": "0.1.0",
   "private": true,
-  "homepage":"./build",
+  "homepage": "./build",
   "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-util": "^3.0.8",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -11,7 +16,7 @@
     "react-scripts": "1.0.13"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

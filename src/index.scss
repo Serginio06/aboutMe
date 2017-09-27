@@ -1,0 +1,61 @@
+// Variable and common properties for all application style
+
+$fontColorGreen: #2bb673;
+$fontColorGrey:#c4c4c4;
+
+
+@mixin transitionMaxHeight($time) {
+  -webkit-transition: max-height $time ease-in-out;
+  -moz-transition: max-height $time ease-in-out;
+  -o-transition: max-height $time ease-in-out;
+  transition: max-height $time ease-in-out;
+}
+
+@mixin transitionAll($time) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin zoom($rate){
+  -moz-transform: scale($rate);
+  -webkit-transform: scale($rate);
+  transform: scale($rate);
+}
+
+//=========== FONTS
+@font-face {
+  font-family: FuturaPtMedium;
+  src: url('./fonts/FuturaPt/FuturaPTMedium.otf');
+}
+
+@font-face {
+  font-family: FuturaPTLight;
+  src: url('./fonts/FuturaPt/FuturaPTLight.otf');
+}
+
+// ================ COMMON
+
+body {
+  margin: 0;
+  padding: 0;
+  //font-family: sans-serif;
+  font-family: FuturaPtMedium;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul{
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
