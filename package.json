@@ -19,8 +19,8 @@
     "react-scripts": "1.0.13"
   },
   "scripts": {
-    "start": "NODE_PATH=src react-scripts start",
-    "build": "react-scripts build",
+    "start": "NODE_PATH=src REACT_APP_IMG_PATH=local react-scripts start",
+    "build": "IMG_PATH=build react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

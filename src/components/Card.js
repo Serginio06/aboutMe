@@ -4,15 +4,20 @@
 import React, {Component} from 'react';
 
 
+
 class Card extends Component {
 
     render() {
         // let paragraphs;
-        // console.log('Card this.props.item=', this.props.item);
+        let basePath = '';
+
+        basePath = process.env.NODE_ENV === 'development' ? './':'./build/';
+        console.log('Card basePath', basePath);
+
 
         return (
             <div className="card">
-                <img src={this.props.item.src} alt=""/>
+                <img src={basePath+this.props.item.src} alt=""/>
                 <p>{this.props.item.text}</p>
             </div>
         )
