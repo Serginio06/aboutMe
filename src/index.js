@@ -12,8 +12,6 @@ import thunk from 'redux-thunk';
 const basePath = process.env.NODE_ENV === "development" ? './':'./build/';
 
 const store = createStore (reducers, applyMiddleware (thunk));
-console.log('process.env= ', process.env);
-console.log('process.env.REACT_APP_IMG_PATH= ', process.env.REACT_APP_IMG_PATH);
 
 ReactDOM.render (
     <Provider store={store}>

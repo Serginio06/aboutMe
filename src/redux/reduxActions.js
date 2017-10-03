@@ -3,11 +3,12 @@
  */
 import aboutJson from './../data/about.json';
 import hobbiesJson from './../data/hobbies.json';
+import projectsJson from './../data/projects.json';
+import classesJson from './../data/classes.json';
+import quotesJson from './../data/quotes.json';
 
 
 export const asyncGetInitAboutParagraphs = () => dispatch => {
-    
-    console.log('aboutJson= ', aboutJson);
 
     setTimeout (()=> {
         // fetch ('./build/data/about.json').then (resp =>resp.json ()).then (resp=> {
@@ -17,7 +18,6 @@ export const asyncGetInitAboutParagraphs = () => dispatch => {
                 payload: aboutJson
             });
         // });
-
     }, 0)
 };
 
@@ -31,6 +31,50 @@ export const asyncGetInitHobbies = () => dispatch => {
                 // payload: resp
                 payload: hobbiesJson
             })
+        // });
+
+    }, 0)
+};
+
+
+export const asyncGetInitProjects = () => dispatch => {
+
+    setTimeout (()=> {
+        // fetch (hobbiesJson).then (resp =>resp.json ()).then (resp=> {
+        dispatch ({
+            type: "GET-INIT-PROJECTS",
+            // payload: resp
+            payload: projectsJson
+        })
+        // });
+
+    }, 0)
+};
+
+
+export const asyncGetInitClasses = () => dispatch => {
+
+    setTimeout (()=> {
+        // fetch (hobbiesJson).then (resp =>resp.json ()).then (resp=> {
+        dispatch ({
+            type: "GET-INIT-CLASSES",
+            // payload: resp
+            payload: classesJson
+        })
+        // });
+
+    }, 0)
+};
+
+export const asyncGetInitQuotes = () => dispatch => {
+
+    setTimeout (()=> {
+        // fetch (hobbiesJson).then (resp =>resp.json ()).then (resp=> {
+        dispatch ({
+            type: "GET-INIT-QUOTES",
+            // payload: resp
+            payload: quotesJson
+        })
         // });
 
     }, 0)

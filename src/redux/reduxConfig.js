@@ -5,6 +5,9 @@
 import {combineReducers} from 'redux';
 import hobbiesReducer from './reducers/HobbyReducer'
 import aboutReducer from './reducers/AboutReducer'
+import projectReducer from './reducers/ProjectReducer'
+import classReducer from './reducers/ClassesReducer'
+import quoteReducer from './reducers/QuotesReducer'
 
 
 
@@ -16,7 +19,10 @@ import aboutReducer from './reducers/AboutReducer'
 //
 export default combineReducers({
     hobbiesReducer,
-    aboutReducer
+    aboutReducer,
+    projectReducer,
+    classReducer,
+    quoteReducer
 })
 
 

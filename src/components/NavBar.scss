@@ -20,15 +20,17 @@
   opacity: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  width: 0;
+  height: 0;
   z-index: 100;
-  @include transitionAll(0.6s);
+  @include transitionAll(0.3s);
 }
 
 .dimmer.active {
-  opacity: 0.3;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -41,7 +43,8 @@
   opacity: 1;
   display: flex;
   justify-content: flex-start;
-  @include transitionAll(0.2s);
+  width: 80%;
+
 
   a:visited {
     color: $fontColorGreen;
@@ -52,17 +55,30 @@
   opacity: 0;
 }
 
+
 .NavBar__items-wrapper {
   position: absolute;
   right: -209px;
-  color: $fontColorGrey;
+
   min-width: 240px;
   display: flex;
   justify-content: flex-start;
   align-self: flex-start;
-
+  background-color: transparent;
   @include transitionAll(0.5s);
 }
+
+.NavBar__item {
+  color: $fontColorGrey;
+
+  cursor: pointer;
+}
+
+.NavBar__item:hover {
+  color:$fontColorGreyHover;
+  //background-color: rgba(0,0,0,0.02);
+}
+
 
 .NavBar__items-wrapper.openUp {
   right: -5px;
@@ -70,10 +86,14 @@
 
 .NavBar__barsIcon {
   position: relative;
-  top: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
   padding-right: 14px;
+  padding-left: 14px;
   max-height: 32px;
-  z-index: 11000;
+  z-index: 12000;
+  cursor: pointer;
+  color: $fontColorGrey;
 }
 
 .NavBar__itemsList {
@@ -106,10 +126,14 @@
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 640px) {
 
   .NavBar {
     flex-wrap: nowrap;
+  }
+
+  .NavBar__name {
+    width: 40%;
   }
 
   .NavBar__barsIcon {
@@ -122,6 +146,8 @@
     top: 0;
     justify-content: flex-end;
   }
+
+
 
   .NavBar__itemsList {
     display: flex;

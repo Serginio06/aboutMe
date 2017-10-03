@@ -4,11 +4,15 @@ import NavBar from './../components/NavBar';
 import About from './../components/About';
 import Parallex from './../components/Parallex';
 import Experience from './../components/Experience';
+import Education from './../components/Education';
+import Quote from './../components/Quote';
+import Contacts from './../components/Contacts';
+import Footer from './../components/Footer';
 
 
 import {connect} from 'react-redux';
 
-import {asyncGetInitAboutParagraphs, asyncGetInitHobbies} from './../redux/reduxActions';
+import {asyncGetInitAboutParagraphs, asyncGetInitHobbies, asyncGetInitProjects,asyncGetInitQuotes} from './../redux/reduxActions';
 import background1 from './../images/background1.jpeg';
 import background2 from './../images/background2.jpeg';
 import background3 from './../images/background3.jpeg';
@@ -20,6 +24,8 @@ class App extends Component {
     componentWillMount(){
         this.props.onGetInitAboutParagraphs();
         this.props.onGetInitHobbies();
+        this.props.onGetInitProjects();
+        this.props.onGetInitQuotes();
         // console.log('hobbiesStore=', this.props.hobbiesStore);
     }
 
@@ -37,11 +43,14 @@ class App extends Component {
             }
         ];
 
-        let aboutComponent='';
+        let aboutComponent, experienceComponent, educationComponent,quoteComponent='';
 
-        if ( this.props.aboutStore && this.props.hobbiesStore ) {
-            // console.log('this.props.aboutStore in APP', this.props.aboutStore);
+        if ( this.props.aboutStore && this.props.hobbiesStore && this.props.projectsStore && this.props.quotesStore ) {
+            // console.log('this.props.projectsStore in APP', this.props.projectsStore);
             aboutComponent=<About aboutStore={this.props.aboutStore} hobbiesStore={this.props.hobbiesStore}></About>
+            experienceComponent=<Experience projectsStore={this.props.projectsStore}></Experience>
+            educationComponent=<Education projectsStore={this.props.projectsStore}></Education>
+            quoteComponent=<Quote quotesStore={this.props.quotesStore[0]}></Quote>
         }
 
 
@@ -51,11 +60,13 @@ class App extends Component {
                 <Parallex bkgImgSrc={bkgImgSrc[0]}></Parallex>
                 {aboutComponent}
                 <Parallex bkgImgSrc={bkgImgSrc[1]}></Parallex>
-                <Experience />
+                {experienceComponent}
+                {quoteComponent}
                 <Parallex bkgImgSrc={bkgImgSrc[2]}></Parallex>
-                {aboutComponent}
+                {educationComponent}
                 <Parallex bkgImgSrc={bkgImgSrc[3]}></Parallex>
-                {aboutComponent}
+                <Contacts />
+                <Footer />
             </div>
         );
     }
@@ -65,7 +76,9 @@ class App extends Component {
 export default connect (
     store => ({
         aboutStore:store.aboutReducer,
-        hobbiesStore:store.hobbiesReducer
+        hobbiesStore:store.hobbiesReducer,
+        projectsStore:store.projectReducer,
+        quotesStore:store.quoteReducer
     }),
     dispatch => ({
         onGetInitAboutParagraphs:()=>{
@@ -73,7 +86,12 @@ export default connect (
         },
         onGetInitHobbies:()=>{
             dispatch(asyncGetInitHobbies());
-
+        },
+        onGetInitProjects:()=>{
+            dispatch(asyncGetInitProjects());
+        },
+        onGetInitQuotes:()=>{
+            dispatch(asyncGetInitQuotes());
         }
     })
 ) (App);

@@ -1,0 +1,45 @@
+.footer {
+  height: 200px;
+  background-color: $footerBackground;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  div{
+    background-color: transparent;
+  }
+}
+
+.footer__socialBtnWrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 110px;
+  background-color: transparent;
+}
+
+.footer__socialBtn {
+  background-color: #272727;
+  border-radius: 50%;
+  color: transparent;
+  width: 30px;
+  height: 30px;
+  //text-align: center;
+  display: flex;
+  justify-content: center;
+  //align-content: center;
+}
+
+.footer__socialBtnImg {
+  background-color: transparent;
+  color: white;
+  align-self: center;
+  font-size: 0.9em;
+}
+
+.footer__paragraph{
+  background-color: transparent;
+  text-align: center;
+}

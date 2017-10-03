@@ -1,41 +1,3 @@
-//
-//.App {
-//  text-align: center;
-//}
-//
-//.App-logo {
-//  object-position: 0 -10px;
-//  transform: scale(1.9);
-//  width: 120vw;
-//}
-//
-//.App__background-wrapper {
-//  min-width: 320px;
-//  height: 66.67vh;
-//  max-height: 66.67vh;
-//  overflow: hidden;
-//  z-index: 1000;
-//  position: fixed;
-//  top: 70px;
-//  width: 100%;
-//
-//}
-//
-//.App-header {
-//  min-height: 66.67vh;
-//  -webkit-background-size: cover;
-//  -moz-background-size: cover;
-//  -o-background-size: cover;
-//  background-size: cover;
-//  overflow: auto;
-//  background-repeat: no-repeat;
-//  background-position: calc(30% - 50px) 100px;
-//  min-width: 320px;
-//  transform: scale(1.6);
-//  //-moz-animation: scale16 100s infinite linear 1s;
-//  //-webkit-animation: scale16 100s infinite linear 1s;
-//  //animation: scale16 100s infinite linear 1s;
-//}
 
 .parallax {
   /* The image used */
@@ -45,29 +7,80 @@
   height: 66.67vh;
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-//.App-intro {
-//  font-size: large;
-//}
+.scroll-icon-down {
+  position: absolute;
+  bottom: 31.33vh;
+  right: 7px;
+  //left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border-radius: 15px;
+  //border: 2px solid $fontColorGreen;
+  //border: 2px solid #272727;
+  //border: 2px solid #fff;
+  text-align: center;
+  background-color: #fbfcff;
+  z-index: 50;
+}
 
-//@keyframes App-logo-spin {
-//  from {
-//    transform: rotate(0deg);
-//  }
-//  to {
-//    transform: rotate(360deg);
-//  }
-//}
+.scroll-icon-down:before {
+  content: '\f107';
+  //color: $fontColorGreen;
+  color: #272727;
+  font-size: 18px;
+  font-family: FontAwesome;
+  position: relative;
+  -moz-animation: scroll 1.5s infinite ease-in-out;
+  -webkit-animation: scroll 1.5s infinite ease-in-out;
+  animation: scrollDown 1.5s infinite ease-in-out;
+}
 
-@media only screen and (min-width: 768px) {
+@-moz-keyframes scrollDown {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
+}
+@-webkit-keyframes scrollDown {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
+}
+@keyframes scrollDown {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
 
   .App-header {
     background-position-y: 0;
+  }
+
+  .parallax {
+    background-attachment: fixed;
   }
 
 }
@@ -78,7 +91,5 @@
     background-position: calc(50%) -15vw;
   }
 
-  //.parallax {
-  //  background-attachment: scroll;
-  //}
+
 }

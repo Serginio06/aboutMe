@@ -11,13 +11,12 @@ class Hobbies extends Component {
         // console.log('Hobbies this.props.items=', this.props.items);
 
         return (
-            <div className="hobbies">
+            <div className="hobbies blockFullWidth">
                 <h2>When I'm not working, you can find me ...</h2>
                 <div className="cardsWrapper">
                     {this.props.items.map ((item, index)=> {
                         let elem;
                         elem = <Card item={item} key={index}/>;
-
                         return elem
                     })
                     }

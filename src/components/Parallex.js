@@ -11,6 +11,7 @@ class Parallex extends Component{
         return (
             <div>
                     <div className="parallax" style={this.props.bkgImgSrc}></div>
+                <a href="./" className="scroll-icon-down"></a>
             </div>
         )
     }
