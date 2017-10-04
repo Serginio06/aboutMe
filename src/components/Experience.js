@@ -9,7 +9,7 @@ class Experience extends Component {
     render() {
 
         return (
-            <div className="experience component__wrapper">
+            <div className="experience component__wrapper" id="portfolio">
                 <h1>Experience</h1>
 
                 <div className="block624">

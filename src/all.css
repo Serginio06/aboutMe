@@ -205,7 +205,7 @@ p, li {
   justify-content: center;
   flex-wrap: wrap; }
 
-.BlackWhiteButton {
+[class*="BlackWhiteButton"] {
   border: 2px solid #272727;
   border-radius: 3px;
   background-color: transparent;
@@ -221,6 +221,11 @@ p, li {
   cursor: pointer;
   margin-top: 25px;
   margin-bottom: 40px; }
+
+.BlackWhiteButton1 {
+  margin-left: 30%;
+  margin-right: 30%;
+  min-width: 250px; }
 
 .contacts__buttonsWrapper {
   display: flex;
@@ -286,6 +291,9 @@ p, li {
     opacity: 1;
     top: 0px; } }
 
+.contacts__arrowUp-div {
+  cursor: pointer; }
+
 @media only screen and (min-width: 640px) {
   .contacts__buttonsWrapper {
     justify-content: space-between;
@@ -298,7 +306,7 @@ p, li {
   margin-left: 15px; }
 
 .footer {
-  height: 200px;
+  height: 250px;
   background-color: #f5f5f5;
   display: flex;
   flex-wrap: wrap;
@@ -307,33 +315,50 @@ p, li {
   .footer div {
     background-color: transparent; }
 
-.footer__socialBtnWrapper {
+.footer__socialButtonWrapper {
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: nowrap;
   width: 110px;
   background-color: transparent; }
 
-.footer__socialBtn {
+[class^="footer__socialBtn"] {
   background-color: #272727;
   border-radius: 50%;
   color: transparent;
   width: 30px;
   height: 30px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  transition: background-color 0.6s; }
 
-.footer__socialBtnImg {
+.footer__socialBtn-google:hover {
+  background-color: #db5442; }
+
+.footer__socialBtn-facebook:hover {
+  background-color: #3b5998; }
+
+.footer__socialBtn-upwork:hover {
+  background-color: #5BBC2F; }
+
+.footer__socialButtonImg {
   background-color: transparent;
   color: white;
   align-self: center;
   font-size: 0.9em; }
 
+.footer__BtnBackgroundImg {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
 .footer__paragraph {
   background-color: transparent;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 5px; }
 
 .NavBar {
   background: #ffffff;
@@ -445,6 +470,18 @@ p, li {
     padding-bottom: 20px;
     padding-top: 20px; }
 
+.activeMenuItm {
+  color: #2bb673 !important;
+  text-decoration: none;
+  outline: none;
+  outline-offset: 0;
+  border-bottom-style: solid;
+  border-bottom-color: #2bb673;
+  border-bottom-width: 2px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding-bottom: 24px; }
+
 @media only screen and (min-width: 640px) {
   .NavBar {
     flex-wrap: nowrap; }
@@ -487,7 +524,7 @@ p, li {
 
 .scroll-icon-down {
   position: absolute;
-  bottom: 31.33vh;
+  bottom: 30.33vh;
   right: 7px;
   width: 30px;
   height: 50px;
@@ -495,7 +532,8 @@ p, li {
   border-radius: 15px;
   text-align: center;
   background-color: #fbfcff;
-  z-index: 50; }
+  z-index: 50;
+  cursor: pointer; }
 
 .scroll-icon-down:before {
   content: '\f107';

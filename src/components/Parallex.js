@@ -3,15 +3,26 @@
  */
 
 import React,{Component} from 'react';
+import Scroll from 'react-scroll';
+
+let scroll = Scroll.animateScroll;
 
 class Parallex extends Component{
+
+    scrollToBottom() {
+        scroll.scrollToBottom ();
+    }
+
+    scrollToTop() {
+        scroll.scrollToTop ();
+    }
 
     render(){
 
         return (
-            <div>
+            <div id="top">
                     <div className="parallax" style={this.props.bkgImgSrc}></div>
-                <a href="./" className="scroll-icon-down"></a>
+                <div onClick={this.scrollToBottom.bind(this)} className="scroll-icon-down"></div>
             </div>
         )
     }

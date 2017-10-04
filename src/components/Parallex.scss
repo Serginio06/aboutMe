@@ -15,7 +15,7 @@
 
 .scroll-icon-down {
   position: absolute;
-  bottom: 31.33vh;
+  bottom: 30.33vh;
   right: 7px;
   //left: 50%;
   width: 30px;
@@ -28,6 +28,7 @@
   text-align: center;
   background-color: #fbfcff;
   z-index: 50;
+  cursor: pointer;
 }
 
 .scroll-icon-down:before {
