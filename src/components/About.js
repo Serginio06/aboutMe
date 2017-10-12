@@ -38,11 +38,11 @@ class About extends Component {
                     </div>
                 </div>
 
-                <div className="blockFullWidth">
-                    <div className="block1000">
-                        <Hobbies items={this.props.hobbiesStore}/>
-                    </div>
-                </div>
+                {/*<div className="blockFullWidth">*/}
+                    {/*<div className="block1000">*/}
+                        {/*<Hobbies items={this.props.hobbiesStore}/>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
             </div>
         )
     }

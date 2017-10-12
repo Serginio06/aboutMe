@@ -1,6 +1,7 @@
 [
-  {"id":1,"src":"./images/project1.jpeg", "text":"Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.", "link":"https://serginio06.github.io/angular-ivanchenko/#!/"},
-  {"id":2,"src":"./images/project2.jpeg", "text":"Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.", "link":"https://serginio06.github.io/angular-ivanchenko/#!/"},
-  {"id":3,"src":"./images/project3.jpeg", "text":"Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.", "link":"https://serginio06.github.io/angular-ivanchenko/#!/"}
+  {"id":1,"src":"./images/project1.png", "text":"Ut at dolor ", "link":"https://serginio06.github.io/angular-ivanchenko"},
+  {"id":2,"src":"./images/project2.png", "text":"Ut at dolor ", "link":"https://serginio06.github.io/theHam"},
+  {"id":3,"src":"./images/project3.png", "text":"Ut at dolor", "link":"https://github.com/Serginio06/display"},
+  {"id":4,"src":"./images/project4.png", "text":"Ut at dolor", "link":"https://serginio06.github.io/aboutMe/"}
 ]
 

@@ -21,7 +21,9 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 320px; }
+  min-width: 320px;
+  width: 100%;
+  overflow-x: hidden; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -110,7 +112,7 @@ h2 {
   flex-wrap: wrap; }
 
 .component__wrapper {
-  padding-top: 50px;
+  padding-top: 25px;
   padding-bottom: 50px;
   position: relative;
   display: flex;
@@ -126,7 +128,7 @@ p, li {
   position: relative;
   width: 100%;
   text-align: left;
-  line-height: 1.6em; }
+  line-height: 1.4em; }
 
 .cardsWrapper {
   width: 100%;
@@ -145,7 +147,7 @@ p, li {
     width: 60vw; }
   .cardsWrapper {
     display: flex;
-    flex-wrap: nowrap; } }
+    flex-wrap: wrap; } }
 
 .card {
   display: flex;
@@ -209,7 +211,7 @@ p, li {
   border: 2px solid #272727;
   border-radius: 3px;
   background-color: transparent;
-  color: #272727;
+  color: #272727 !important;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -220,12 +222,14 @@ p, li {
   text-align: center;
   cursor: pointer;
   margin-top: 25px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  outline-color: #2bb673; }
 
 .BlackWhiteButton1 {
   margin-left: 30%;
   margin-right: 30%;
-  min-width: 250px; }
+  min-width: 250px;
+  color: black !important; }
 
 .contacts__buttonsWrapper {
   display: flex;
@@ -304,6 +308,33 @@ p, li {
 
 .experience__bullets {
   margin-left: 15px; }
+
+.experience__title-block {
+  color: rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-size: 20px;
+  margin-left: 0;
+  margin-bottom: 10px; }
+
+.experience__table-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  margin-left: 15px; }
+
+.experience__table-cell {
+  width: 30%;
+  min-width: 175px; }
+
+@media only screen and (min-width: 640px) {
+  .experience__title-block {
+    text-align: left;
+    width: 200%;
+    margin-left: -90px; } }
 
 .footer {
   height: 250px;
@@ -586,19 +617,44 @@ p, li {
   justify-content: center;
   width: 100%;
   min-width: 320px;
-  padding-bottom: 2px; }
+  padding-bottom: 2px;
+  -webkit-box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   .PrjectCard img {
     width: 100%;
     height: 100%; }
 
+.PrjectCard:hover {
+  -webkit-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.4); }
+
 @media only screen and (min-width: 640px) {
   .PrjectCard {
-    width: 25%;
-    min-width: 160px;
-    padding: 17px; }
-    .PrjectCard img {
-      max-width: 230px;
-      max-height: 150px; } }
+    width: 45%;
+    opacity: 0.85;
+    min-width: 300px;
+    border: 2px solid #2bb673;
+    border-radius: 7px;
+    -webkit-box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 7px 7px 4px 0px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+  .PrjectCard:hover {
+    opacity: 1;
+    -webkit-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.4); } }
 
 .subBlock {
   width: 100%;

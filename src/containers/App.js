@@ -13,7 +13,7 @@ import Footer from './../components/Footer';
 import {connect} from 'react-redux';
 
 import {asyncGetInitAboutParagraphs, asyncGetInitHobbies, asyncGetInitProjects,asyncGetInitQuotes} from './../redux/reduxActions';
-import background1 from './../images/background1.jpeg';
+import background1 from './../images/background1.jpg';
 import background2 from './../images/background2.jpeg';
 import background3 from './../images/background3.jpeg';
 import background4 from './../images/background4.jpeg';

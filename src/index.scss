@@ -56,7 +56,8 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
-
+  width: 100%;
+  overflow-x: hidden;
   //font-family: sans-serif;
 
 }
@@ -158,7 +159,7 @@ h2{
 }
 
 .component__wrapper {
-  padding-top: 50px;
+  padding-top: 25px;
   padding-bottom: 50px;
   position: relative;
   display: flex;
@@ -176,7 +177,7 @@ p, li{
   position: relative;
   width: 100%;
   text-align: left;
-  line-height: 1.6em;
+  line-height: 1.4em;
 }
 
 .cardsWrapper {
@@ -200,7 +201,7 @@ p, li{
 
   .cardsWrapper {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
 

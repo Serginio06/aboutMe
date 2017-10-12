@@ -12,8 +12,8 @@ class Card extends Component {
 
         return (
             <div className="PrjectCard">
-                <a src="#">
-                    <img src={basePath + this.props.item.src} alt=""/>
+                <a href={this.props.item.link} target="_blank">
+                    <img src={basePath + this.props.item.src} alt={this.props.item.src}/>
                 </a>
                 {/*<p>{this.props.item.text}</p>*/}
             </div>

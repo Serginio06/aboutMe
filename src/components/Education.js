@@ -14,7 +14,9 @@ class Education extends Component {
 
                 <div className="block624">
 
-                    <p>AI graduated from ISG (Institut Supérieur de Gestion) - Paris, France - in 2012 and obtained a Master in Management, speciality Marketing.</p>
+                    {/*<p>I graduated from ISG (Institut Supérieur de Gestion) - Paris, France - in 2012 and obtained a Master in Management, speciality Marketing.</p>*/}
+                    <p>I graduated from Kiev National University in 2003 and obtained a Master in computer sciences, specialty “Information engineering technologies”.
+                    </p>
                     <div>&nbsp;</div>
                     {/*<ul className="experience__bullets">*/}
                         {/*<li>Worked as a Marketing & Strategy Manager at Dolmen for the Shanghai branch</li>*/}
