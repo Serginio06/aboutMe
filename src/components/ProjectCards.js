@@ -7,15 +7,19 @@ import React, {Component} from 'react';
 class Card extends Component {
 
     render() {
-        let basePath = '';
+        let basePath, projectCardContant = '';
         basePath = process.env.NODE_ENV === 'development' ? './' : './build/';
+
+
+        if ( this.props.item ) {
+            projectCardContant = <a href={this.props.item.link} target="_blank">
+                <img src={basePath + this.props.item.src} alt={this.props.item.src}/>
+            </a>
+        }
 
         return (
             <div className="PrjectCard">
-                <a href={this.props.item.link} target="_blank">
-                    <img src={basePath + this.props.item.src} alt={this.props.item.src}/>
-                </a>
-                {/*<p>{this.props.item.text}</p>*/}
+                {projectCardContant}
             </div>
         )
     }

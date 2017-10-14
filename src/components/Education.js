@@ -30,7 +30,7 @@ class Education extends Component {
 
                 <div className="blockFullWidth">
                     <div className="block1000">
-                        <Classes items={this.props.projectsStore}/>
+                        <Classes items={this.props.classesStore}/>
                     </div>
                 </div>
 

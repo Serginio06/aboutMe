@@ -7,13 +7,6 @@ import Hobbies from './../components/Hobbies';
 class About extends Component {
 
     render() {
-        // let paragraphs;
-        // console.log ('About this.props.hobbiesStore=', this.props.hobbiesStore);
-
-        // if ( this.props.aboutStore ) {
-        //     paragraphs = this.props.aboutStore;
-        // }
-
 
         return (
             <div className="about component__wrapper">
@@ -38,11 +31,11 @@ class About extends Component {
                     </div>
                 </div>
 
-                {/*<div className="blockFullWidth">*/}
-                    {/*<div className="block1000">*/}
-                        {/*<Hobbies items={this.props.hobbiesStore}/>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
+                <div className="blockFullWidth">
+                    <div className="block1000">
+                        <Hobbies items={this.props.hobbiesStore}/>
+                    </div>
+                </div>
             </div>
         )
     }

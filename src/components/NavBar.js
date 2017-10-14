@@ -25,7 +25,6 @@ class NavBar extends Component {
 
     }
 
-
     barsIconClick = function () {
         if (!this.state.isMenuOpened) {
             console.log ('barsIconClick opened');
@@ -90,9 +89,9 @@ class NavBar extends Component {
 
         return (
             <div className="NavBar">
-                <div className={this.state.dimmer}></div>
+                <div className={this.state.dimmer} onClick={this.barsIconClick.bind (this)}></div>
                 <div className={this.state.NavBar__name}>
-                    <a onClick={this.scrollToTop.bind(this)} className="uppercase">
+                    <a onClick={this.scrollToTop.bind(this)} className="NavBar__name-a-elem uppercase">
                         Serhii Ivanchenko
                     </a>
                 </div>
@@ -100,12 +99,20 @@ class NavBar extends Component {
                 {/*<div className={this.state.NavBar__itemsWrapper} ref={(div)=>this.itemsWrapperDiv = div}>*/}
                 <div className={this.state.menuClass} ref={(div)=>this.itemsWrapperDiv = div}>
                     <i className="fa fa-bars fa-2x NavBar__barsIcon" onClick={this.barsIconClick.bind (this)}></i>
+
                     <ul className="NavBar__itemsList">
                         {/*<ul className={this.state.menuClass}>*/}
                         <li className="NavBar__item uppercase"><Link activeClass="activeMenuItm" to="top" spy={true} smooth={'easeOutQuart'} duration={1000} offset={-60} isDynamic={true}>Home</Link></li>
 
                         <li className="NavBar__item uppercase"><Link activeClass="activeMenuItm" to="portfolio" spy={true} smooth={'easeOutQuart'} duration={1000} offset={-60} isDynamic={true}>Portfolio</Link></li>
                         <li className="NavBar__item uppercase"><Link activeClass="activeMenuItm" to="contacts" spy={true} smooth={'easeOutQuart'} duration={1000} offset={-70} isDynamic={true}>Contact</Link></li>
+                    </ul>
+                    <ul className="NavBar__itemsList_mobile">
+                        {/*<ul className={this.state.menuClass}>*/}
+                        <li className="NavBar__item uppercase"><Link onClick={this.barsIconClick.bind (this)} activeClass="activeMenuItm" to="top" spy={true} smooth={'easeOutQuart'} duration={1000} offset={-60} isDynamic={true}>Home</Link></li>
+
+                        <li className="NavBar__item uppercase"><Link onClick={this.barsIconClick.bind (this)} activeClass="activeMenuItm" to="portfolio" spy={true} smooth={'easeOutQuart'} duration={1000} offset={-60} isDynamic={true}>Portfolio</Link></li>
+                        <li className="NavBar__item uppercase"><Link onClick={this.barsIconClick.bind (this)} activeClass="activeMenuItm" to="contacts" spy={true} smooth={'easeOutQuart'} duration={1000} offset={-70} isDynamic={true}>Contact</Link></li>
                     </ul>
                 </div>
 

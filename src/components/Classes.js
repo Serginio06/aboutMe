@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react';
 import ClassesCard from './ClassesCard';
+// import ClassesCard from './ClassesCard';
 
 class Classes extends Component {
 

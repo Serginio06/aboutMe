@@ -15,6 +15,6 @@ const store = createStore (reducers, applyMiddleware (thunk));
 
 ReactDOM.render (
     <Provider store={store}>
-        <App basePath={basePath}/>
+        <App basePath={basePath} />
     </Provider>, document.getElementById ('root'));
 // registerServiceWorker();

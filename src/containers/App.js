@@ -12,7 +12,7 @@ import Footer from './../components/Footer';
 
 import {connect} from 'react-redux';
 
-import {asyncGetInitAboutParagraphs, asyncGetInitHobbies, asyncGetInitProjects,asyncGetInitQuotes} from './../redux/reduxActions';
+import {asyncGetInitAboutParagraphs, asyncGetInitHobbies, asyncGetInitProjects, asyncGetInitClasses, asyncGetInitQuotes} from './../redux/reduxActions';
 import background1 from './../images/background1.jpg';
 import background2 from './../images/background2.jpeg';
 import background3 from './../images/background3.jpeg';
@@ -25,6 +25,7 @@ class App extends Component {
         this.props.onGetInitAboutParagraphs();
         this.props.onGetInitHobbies();
         this.props.onGetInitProjects();
+        this.props.onGetInitClasses();
         this.props.onGetInitQuotes();
         // console.log('hobbiesStore=', this.props.hobbiesStore);
     }
@@ -49,7 +50,7 @@ class App extends Component {
             // console.log('this.props.projectsStore in APP', this.props.projectsStore);
             aboutComponent=<About aboutStore={this.props.aboutStore} hobbiesStore={this.props.hobbiesStore}></About>
             experienceComponent=<Experience projectsStore={this.props.projectsStore}></Experience>
-            educationComponent=<Education projectsStore={this.props.projectsStore}></Education>
+            educationComponent=<Education classesStore={this.props.classesStore}></Education>
             quoteComponent=<Quote quotesStore={this.props.quotesStore[0]}></Quote>
         }
 
@@ -78,6 +79,7 @@ export default connect (
         aboutStore:store.aboutReducer,
         hobbiesStore:store.hobbiesReducer,
         projectsStore:store.projectReducer,
+        classesStore:store.classReducer,
         quotesStore:store.quoteReducer
     }),
     dispatch => ({
@@ -89,6 +91,9 @@ export default connect (
         },
         onGetInitProjects:()=>{
             dispatch(asyncGetInitProjects());
+        },
+        onGetInitClasses:()=>{
+            dispatch(asyncGetInitClasses());
         },
         onGetInitQuotes:()=>{
             dispatch(asyncGetInitQuotes());

@@ -8,6 +8,10 @@ class Experience extends Component {
 
     render() {
 
+        let basePath = '';
+        basePath = process.env.NODE_ENV === 'development' ? './' : './build/';
+
+
         return (
             <div className="experience component__wrapper" id="portfolio">
                 <h1>Experience</h1>
@@ -15,7 +19,7 @@ class Experience extends Component {
 
                 <div className="block624">
                     <div className="experience__title-block">Summary</div>
-                    <p>I am a hard-working personality, who like to come across challenges and complete them
+                    <p>I am a hard-working personality, who likes to come across challenges and overcome them
                         to utmost perfection. I try to be pro efficient in my fields of expertise,
                         also open for good criticism for my personal improvement. Adaptive with new
                         applications and technologies.
@@ -43,7 +47,7 @@ class Experience extends Component {
                         <li className="experience__table-cell">Gulp</li>
                         <li className="experience__table-cell">ES5/ES6</li>
                     </ul>
-
+                    <a href={basePath+"assets/CV.Sergii Ivanchenko.pdf"} className="BlackWhiteButton1">Curriculum Vitae</a>
 
 
                     {/*<ul className="experience__bullets">*/}

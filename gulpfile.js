@@ -20,8 +20,29 @@ gulp.task('process-scss',function () {
                .pipe(gulp.dest('src'));
 });
 
-gulp.task ('watch', function () {
-    gulp.watch ('src/**/*.scss', [ 'process-scss']);
+gulp.task('copy-data', function () {
+    gutil.log('Copy data...');
+    return gulp.src('src/data/*.*')
+               .pipe(gulp.dest('public/data'));
 });
 
-gulp.task('default', [ 'process-scss','watch']);
+gulp.task('copy-images', function () {
+    gutil.log('Copy images...');
+    return gulp.src('src/images/*.*')
+               .pipe(gulp.dest('public/images'));
+});
+
+gulp.task('copy-video', function () {
+    gutil.log('Copy video...');
+    return gulp.src('src/video/*.*')
+               .pipe(gulp.dest('public/video'));
+});
+
+gulp.task ('watch', function () {
+    gulp.watch ('src/**/*.scss', [ 'process-scss']);
+    gulp.watch ('src/data/*.*', [ 'copy-data']);
+    gulp.watch ('src/images/*.*', [ 'copy-images']);
+    gulp.watch ('src/video/*.*', [ 'copy-video']);
+});
+
+gulp.task('default', [ 'process-scss','copy-data', 'copy-images','copy-video','watch']);
