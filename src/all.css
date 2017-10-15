@@ -6,14 +6,6 @@
   font-family: FuturaPTLight;
   src: url("./fonts/FuturaPt/FuturaPTLight.otf"); }
 
-@font-face {
-  font-family: HelveticaNeue;
-  src: url("./fonts/helveticaneue/HelveticaNeue Thin.ttf"); }
-
-@font-face {
-  font-family: HelveticaNeueBold;
-  src: url("./fonts/helveticaneue/HelveticaNeue Medium.ttf"); }
-
 * {
   font-family: HelveticaNeue;
   font-style: normal;
